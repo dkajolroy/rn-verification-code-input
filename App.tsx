@@ -19,7 +19,6 @@ export default function App() {
     third: undefined,
     forth: undefined,
   });
-  console.log(ref1);
 
   type PositionType = 'first' | 'second' | 'third' | 'forth';
 
@@ -47,8 +46,8 @@ export default function App() {
   };
 
   return (
-    <View style={{marginHorizontal: 10}}>
-      <Text style={{fontSize: 20}}>Verification Code</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Verification Code</Text>
       <View style={styles.verifyBox}>
         <TextInput
           style={styles.input}
@@ -88,6 +87,23 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    marginHorizontal: 10,
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center',
+  },
+  verifyBox: {
+    flexDirection: 'row',
+  },
+  title: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    color: 'black',
+    borderBottomWidth: 1,
+    borderColor: 'gray',
+  },
   input: {
     borderWidth: 2,
     borderColor: 'tomato',
@@ -96,8 +112,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     textAlign: 'center',
     fontSize: 18,
-  },
-  verifyBox: {
-    flexDirection: 'row',
   },
 });
